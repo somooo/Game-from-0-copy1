@@ -10,8 +10,10 @@ import SwiftUI
 import ARKit
 
 struct ARGameView: View {
+    @State private var modelConfirmedForPlacement: model?
+
     var body: some View {
-        ARViewContainer()
+        ARViewContainer(modelConfirmedForPlacement: $modelConfirmedForPlacement)
             .edgesIgnoringSafeArea(.all)
     }
 }

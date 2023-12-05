@@ -20,6 +20,14 @@
 		3582DCD82B15E3A200832623 /* ARGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DCD72B15E3A200832623 /* ARGameView.swift */; };
 		3582DCDA2B15E54800832623 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DCD92B15E54800832623 /* ARViewContainer.swift */; };
 		3582DCDF2B1C675E00832623 /* JoinGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DCDE2B1C675E00832623 /* JoinGameView.swift */; };
+		3582DCE22B1DF14900832623 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DCE12B1DF14900832623 /* SplashScreen.swift */; };
+		3582DCE42B1DF17C00832623 /* Story1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DCE32B1DF17C00832623 /* Story1.swift */; };
+		3582DCE62B1DF1AA00832623 /* Story2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DCE52B1DF1AA00832623 /* Story2.swift */; };
+		3582DCE82B1DF1E000832623 /* startPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DCE72B1DF1E000832623 /* startPage.swift */; };
+		3582DCEA2B1DF20300832623 /* SetTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DCE92B1DF20300832623 /* SetTimer.swift */; };
+		3582DCEC2B1DF25600832623 /* GameCodePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DCEB2B1DF25600832623 /* GameCodePage.swift */; };
+		3582DCEE2B1F008D00832623 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DCED2B1F008D00832623 /* model.swift */; };
+		3582DCF12B1F017A00832623 /* coin.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3582DCF02B1F017A00832623 /* coin.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +65,14 @@
 		3582DCD92B15E54800832623 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
 		3582DCDB2B17C2FE00832623 /* Game from 0.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Game from 0.entitlements"; sourceTree = "<group>"; };
 		3582DCDE2B1C675E00832623 /* JoinGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinGameView.swift; sourceTree = "<group>"; };
+		3582DCE12B1DF14900832623 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		3582DCE32B1DF17C00832623 /* Story1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story1.swift; sourceTree = "<group>"; };
+		3582DCE52B1DF1AA00832623 /* Story2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story2.swift; sourceTree = "<group>"; };
+		3582DCE72B1DF1E000832623 /* startPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startPage.swift; sourceTree = "<group>"; };
+		3582DCE92B1DF20300832623 /* SetTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimer.swift; sourceTree = "<group>"; };
+		3582DCEB2B1DF25600832623 /* GameCodePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCodePage.swift; sourceTree = "<group>"; };
+		3582DCED2B1F008D00832623 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		3582DCF02B1F017A00832623 /* coin.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = coin.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +103,7 @@
 		3582DC972B15DB6A00832623 = {
 			isa = PBXGroup;
 			children = (
+				3582DCEF2B1F016600832623 /* Models */,
 				3582DCA22B15DB6A00832623 /* Game from 0 */,
 				3582DCB32B15DB6B00832623 /* Game from 0Tests */,
 				3582DCBD2B15DB6B00832623 /* Game from 0UITests */,
@@ -120,10 +137,17 @@
 		3582DCA92B15DB6B00832623 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				3582DCE12B1DF14900832623 /* SplashScreen.swift */,
+				3582DCE32B1DF17C00832623 /* Story1.swift */,
+				3582DCE52B1DF1AA00832623 /* Story2.swift */,
+				3582DCE72B1DF1E000832623 /* startPage.swift */,
+				3582DCE92B1DF20300832623 /* SetTimer.swift */,
 				3582DCA52B15DB6A00832623 /* ContentView.swift */,
 				3582DCD72B15E3A200832623 /* ARGameView.swift */,
 				3582DCCF2B15E08500832623 /* GameViewModel.swift */,
+				3582DCED2B1F008D00832623 /* model.swift */,
 				3582DCD52B15E18F00832623 /* GameProgressView.swift */,
+				3582DCEB2B1DF25600832623 /* GameCodePage.swift */,
 				3582DCDE2B1C675E00832623 /* JoinGameView.swift */,
 				3582DCAA2B15DB6B00832623 /* Preview Assets.xcassets */,
 			);
@@ -145,6 +169,14 @@
 				3582DCC02B15DB6B00832623 /* Game_from_0UITestsLaunchTests.swift */,
 			);
 			path = "Game from 0UITests";
+			sourceTree = "<group>";
+		};
+		3582DCEF2B1F016600832623 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3582DCF02B1F017A00832623 /* coin.usdz */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3582DCF12B1F017A00832623 /* coin.usdz in Resources */,
 				3582DCAB2B15DB6B00832623 /* Preview Assets.xcassets in Resources */,
 				3582DCA82B15DB6B00832623 /* Assets.xcassets in Resources */,
 			);
@@ -277,12 +310,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3582DCE22B1DF14900832623 /* SplashScreen.swift in Sources */,
 				3582DCD02B15E08500832623 /* GameViewModel.swift in Sources */,
 				3582DCD62B15E18F00832623 /* GameProgressView.swift in Sources */,
+				3582DCE62B1DF1AA00832623 /* Story2.swift in Sources */,
 				3582DCDF2B1C675E00832623 /* JoinGameView.swift in Sources */,
+				3582DCE82B1DF1E000832623 /* startPage.swift in Sources */,
 				3582DCA62B15DB6A00832623 /* ContentView.swift in Sources */,
 				3582DCDA2B15E54800832623 /* ARViewContainer.swift in Sources */,
+				3582DCE42B1DF17C00832623 /* Story1.swift in Sources */,
+				3582DCEA2B1DF20300832623 /* SetTimer.swift in Sources */,
+				3582DCEE2B1F008D00832623 /* model.swift in Sources */,
 				3582DCD42B15E15D00832623 /* GameCodeGenerator.swift in Sources */,
+				3582DCEC2B1DF25600832623 /* GameCodePage.swift in Sources */,
 				3582DCA42B15DB6A00832623 /* AppDelegate.swift in Sources */,
 				3582DCD82B15E3A200832623 /* ARGameView.swift in Sources */,
 			);
