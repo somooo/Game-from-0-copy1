@@ -47,7 +47,7 @@ struct ContentView: View {
         }
     }
     
-  /*  struct ARViewContainer: UIViewRepresentable {
+   struct ARViewContainer: UIViewRepresentable {
         @Binding var modelConfirmedForPlacement: model?
         
         func makeUIView(context: Context) -> ARView {
@@ -75,7 +75,7 @@ struct ContentView: View {
                 }
             }
         }
-    }*/
+    }
     
     struct ModelPickerView: View {
         @Binding var isPlacementEnabled: Bool
