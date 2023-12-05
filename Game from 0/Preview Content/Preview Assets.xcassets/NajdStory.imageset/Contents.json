@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Image.pdf",
+      "filename" : "NajdStory.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "NajdStory 1.pdf",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "NajdStory 2.pdf",
       "idiom" : "universal",
       "scale" : "3x"
     }
