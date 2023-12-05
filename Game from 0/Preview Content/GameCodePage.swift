@@ -24,7 +24,7 @@ struct GameCodePage: View {
     
             VStack{
                 // Text
-                Text("Hide the Coins!")
+                Text("Hide the Coins")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(.black)
@@ -50,7 +50,7 @@ struct GameCodePage: View {
                         .blur(radius: 8)
                         .frame(width: 350,height: 400)
                     VStack{
-                        Text("Game Code !")
+                        Text("Game Code: ")
                             .font(.largeTitle)
                             .fontWeight(.bold)
                             .foregroundColor(.black)
