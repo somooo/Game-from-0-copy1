@@ -16,6 +16,7 @@ import Foundation
 import SwiftUI
 
 struct GameCodePage: View {
+    @State private var gameCode: String = GameCodeGenerator.generateGameCode()
 
     var body: some View {
         NavigationView{
@@ -56,37 +57,30 @@ struct GameCodePage: View {
                             .padding()
                         
                         // Code
-                        Text("4 5 6 7")
-                            .font(.title)
-                            .foregroundColor(.gray)
-                            .padding()
-                        
-                       
-                            // Copy and start button
-                            Button(action: {
-                                
-                                
-                                // Copy the code to the clipboard
-                             }) {
-                                 NavigationLink(destination: ContentView() //.navigationBarBackButtonHidden(true)
-                                 ){
-                                     
-                                     Text("Copy and start")
-                                               }
-                                 
-                                 
-                                 //.navigationBarBackButtonHidden(true)
-                                    .font(.title3)
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.white)
-                                    .padding()
-                            }
-                        
-                            .background(Color.blue)
-                            .cornerRadius(10)
-                            .padding()
-                            
-                        }
+                        Text(gameCode)
+                                                .font(.title)
+                                                .foregroundColor(.gray)
+                                                .padding()
+
+                                            // Copy and start button
+                                            Button(action: {
+                                                // Copy the code to the clipboard
+                                                // Optionally, you can regenerate the code when the button is tapped
+                                                gameCode = GameCodeGenerator.generateGameCode()
+                                            }) {
+                                                NavigationLink(destination: ContentView()) {
+                                                    Text("Copy and start")
+                                                        .font(.title3)
+                                                        .fontWeight(.bold)
+                                                        .foregroundColor(.white)
+                                                        .padding()
+                                                }
+                                            }
+                                            .background(Color.blue)
+                                            .cornerRadius(10)
+                                            .padding()
+                                        }
+
                     
                     }
                 
