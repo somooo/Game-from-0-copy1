@@ -15,11 +15,7 @@ struct JoinGameView: View {
 
     var body: some View {
         NavigationView {
-            ZStack{Image("purpleBack")
-                    .resizable()
-                    .scaledToFill()
-                    .edgesIgnoringSafeArea(.all)
-                    .ignoresSafeArea()
+            ZStack{
                 
                 Image("timerGlass")
                     .resizable()
@@ -45,18 +41,16 @@ struct JoinGameView: View {
                         .padding(35.0)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     
-                    NavigationLink(destination: ContentView(), isActive: $isJoiningGame) {
+                    NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true), isActive: $isJoiningGame) {
                         Text("Join Game")
-                            .font(.headline)
+                            .font(.title3)
                             .fontWeight(.bold)
-                            .foregroundColor(Color(red: 0.317, green: 0.22, blue: 0.643))
+                            .foregroundColor(.white)
                             .padding()
                     }
-                    .frame (width:320,height: 70)
-                    . foregroundColor( .white)
-                    .background(Color.white.gradient).opacity(0.9)
-                    .cornerRadius (15)
-                    .padding(16)
+                    .background(Color.blue)
+                    .cornerRadius(10)
+                    .padding()
                     .onTapGesture {
                         joinGame()
                     }

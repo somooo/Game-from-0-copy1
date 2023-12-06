@@ -68,7 +68,8 @@ struct GameCodePage: View {
                                                 // Optionally, you can regenerate the code when the button is tapped
                                                 gameCode = GameCodeGenerator.generateGameCode()
                                             }) {
-                                                NavigationLink(destination: ContentView()) {
+                                                NavigationLink(destination: ContentView()
+                                                    .navigationBarBackButtonHidden(true)) {
                                                     Text("Copy and start")
                                                         .font(.title3)
                                                         .fontWeight(.bold)

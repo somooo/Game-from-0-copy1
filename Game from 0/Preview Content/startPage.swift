@@ -35,7 +35,8 @@ struct startPage: View {
                         VStack {
                             HStack {
                                 VStack(spacing: 50) {
-                                    NavigationLink(destination: SetTimer()) {
+                                    NavigationLink(destination: ContentView()
+                                        .navigationBarBackButtonHidden(true)) {
                                         Text("Start new game")
                                             .fontWeight(.bold)
                                             .font(.title)
@@ -52,7 +53,9 @@ struct startPage: View {
 
                             HStack(spacing: 20) {
                                 VStack(spacing: 20) {
-                                    NavigationLink(destination: JoinGameView(gameViewModel: GameViewModel())) {
+                                    NavigationLink(destination: JoinGameView(gameViewModel: GameViewModel())
+                                        .navigationBarBackButtonHidden(true)
+                                        ) {
                                         Text("Join existing game")
                                             .fontWeight(.bold)
                                             .font(.title)

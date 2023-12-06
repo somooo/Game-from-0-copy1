@@ -5,7 +5,7 @@
 //  Created by bsamh on 04/12/2023.
 //
 
-import Foundation
+//import Foundation
 //
 //  Story 1.swift
 //  Game from 0
@@ -29,11 +29,12 @@ struct Story1: View {
             VStack{
                 Image("grandMa")
                     .position(CGPoint(x: 155, y: 347))
+                  //  .imageScale(.large)
                 ZStack{
                     Image("storyGlassCard")
                         .position(CGPoint(x: 215, y: 240))
                     
-                    Text("Hello, world!\nWelcome to SwiftUI!\nI have a perfect game!!")
+                    Text("Hello, world!\n Welcome to SwiftUI!\nI have a perfect game!!")
                         .bold()
                         .position(CGPoint(x: 220, y: 230))
                       //  .font(.body)
@@ -42,7 +43,8 @@ struct Story1: View {
                         .multilineTextAlignment(.center)
                        
                     
-                    NavigationLink(destination:Story2()       .navigationBarBackButtonHidden(true)) {
+                    NavigationLink(destination:Story2()       .navigationBarBackButtonHidden(true)) 
+                    {
                         
                         Image("arrow")
                             .resizable()
