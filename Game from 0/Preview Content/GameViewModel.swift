@@ -9,6 +9,7 @@ import UIKit
 import RealityKit
 import Combine
 import CoreLocation
+import CloudKit
 
 
 class Game: ObservableObject {

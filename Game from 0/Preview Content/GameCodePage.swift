@@ -9,6 +9,7 @@
 import SwiftUI
 import UIKit
 import Foundation
+import CloudKit
 
 struct GameCodePage: View {
     @State private var gameCode: String = GameCodeGenerator.generateGameCode()
@@ -79,7 +80,7 @@ struct GameCodePage: View {
                                                         gameCode = GameCodeGenerator.generateGameCode()
                                                     }//button
                                                     ) {
-                                                        NavigationLink(destination: ContentView()
+                                                        NavigationLink(destination: result()
                                                             .navigationBarBackButtonHidden(true)) {
                                                                 Text("Start")
                                                                     .font(.title3)
@@ -87,7 +88,7 @@ struct GameCodePage: View {
                                                                     .foregroundColor(.white)
                                                                     .padding()
                                                             }//Navigationlink
-                                                    }//text
+                                                    }//NavegationLink
                                                     .background(Color.blue)
                                                     .cornerRadius(10)
                                                     .padding()

@@ -6,6 +6,7 @@
 //
 import SwiftUI
 import Foundation
+import CloudKit
 
 struct GameProgressView: View {
     @ObservedObject var Game: GameViewModel

@@ -8,6 +8,7 @@
 import SwiftUI
 import RealityKit
 import ARKit
+import CloudKit
 
 struct ContentView: View {
     @StateObject private var gameViewModel = GameViewModel()
@@ -59,6 +60,8 @@ struct ContentView: View {
        func updateUIView(_ uiView: ARView, context: Context) {
            if let model = self.modelConfirmedForPlacement {
                if let modelEntity = model.modelEntity {
+                   print("DEBUG: adding model to scene - \(model.ModelName)")
+                   
                    // Perform a raycast to find a horizontal surface
                    let results = uiView.raycast(from: uiView.center, allowing: .estimatedPlane, alignment: .horizontal)
                    

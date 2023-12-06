@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import ARKit
+import CloudKit
 
 struct ARGameView: View {
     @State private var modelConfirmedForPlacement: model?

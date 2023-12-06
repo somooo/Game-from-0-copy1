@@ -151,8 +151,8 @@
 				3582DCD52B15E18F00832623 /* GameProgressView.swift */,
 				3582DCEB2B1DF25600832623 /* GameCodePage.swift */,
 				3582DCDE2B1C675E00832623 /* JoinGameView.swift */,
-				3582DCAA2B15DB6B00832623 /* Preview Assets.xcassets */,
 				D452A5E82B20A43700B8FE5C /* result.swift */,
+				3582DCAA2B15DB6B00832623 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
