@@ -12,10 +12,10 @@ struct GameProgressView: View {
 
     var body: some View {
         VStack {
-            Text("Game Code: \(Game.gameCode)")
+            Text("Game Code: \(Game.GameCode)")
                 .font(.title)
 
-            Text("Player Progress: \(Game.treasureCollected)")
+            Text("Player Progress: \(Game.CoinsCollected)")
                 .font(.headline)
                 .padding()
 

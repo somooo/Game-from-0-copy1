@@ -16,7 +16,7 @@ import Foundation
 import SwiftUI
 
 struct GameCodePage: View {
-    @State private var gameCode: String = GameCodeGenerator.generateGameCode()
+    @State private var GameCode: String = GameCodeGenerator.generateGameCode()
 
     var body: some View {
         NavigationView{
@@ -57,7 +57,7 @@ struct GameCodePage: View {
                             .padding()
                         
                         // Code
-                        Text(gameCode)
+                        Text(GameCode)
                                                 .font(.title)
                                                 .foregroundColor(.gray)
                                                 .padding()
@@ -66,7 +66,7 @@ struct GameCodePage: View {
                                             Button(action: {
                                                 // Copy the code to the clipboard
                                                 // Optionally, you can regenerate the code when the button is tapped
-                                                gameCode = GameCodeGenerator.generateGameCode()
+                                                GameCode = GameCodeGenerator.generateGameCode()
                                             }) {
                                                 NavigationLink(destination: ContentView()
                                                     .navigationBarBackButtonHidden(true)) {

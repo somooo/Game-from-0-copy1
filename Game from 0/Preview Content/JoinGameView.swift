@@ -3,8 +3,8 @@ import CloudKit
 
 // Define GameViewModel before using it in JoinGameView
 class GameViewModel: ObservableObject {
-    @Published var gameCode: String = ""
-    @Published var treasureCollected: Int = 0
+    @Published var GameCode: String = ""
+    @Published var CoinsCollected: Int = 0
 }
 
 struct JoinGameView: View {
@@ -64,7 +64,7 @@ struct JoinGameView: View {
         // Update the gameViewModel with the session details
         // For simplicity, assume a CloudKit record type named "GameSession"
         let recordType = "Game"
-        let predicate = NSPredicate(format: "gameCode == %@", enteredCode)
+        let predicate = NSPredicate(format: "GameCode == %@", enteredCode)
         let query = CKQuery(recordType: recordType, predicate: predicate)
 
         CKContainer.default().publicCloudDatabase.perform(query, inZoneWith: nil) { records, error in

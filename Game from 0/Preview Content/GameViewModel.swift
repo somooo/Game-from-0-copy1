@@ -36,7 +36,7 @@ class CoinPosition: ObservableObject {
     
 class Results: ObservableObject {
     @Published var CoinsCollected: Int = 0
-    @Published var gameCode: String = ""
+    @Published var GameCode: String = ""
     @Published var GameCreator: String = ""
     @Published var playerID: String = ""
     @Published var PlayerName: String = ""
