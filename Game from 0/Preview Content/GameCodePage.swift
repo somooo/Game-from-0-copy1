@@ -18,7 +18,7 @@ struct GameCodePage: View {
         ZStack{
             VStack {
                 // Text
-                Text("Game Code: ")
+                Text("رمز التحدي")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(.black)
@@ -63,7 +63,7 @@ struct GameCodePage: View {
                                                             gameCode = GameCodeGenerator.generateGameCode()
                                                         }//button
                                                         ) {
-                                                            Text("Copy")
+                                                            Text("نسخ")
                                                                 .font(.title3)
                                                                 .fontWeight(.bold)
                                                                 .foregroundColor(.white)
@@ -82,7 +82,7 @@ struct GameCodePage: View {
                                                     ) {
                                                         NavigationLink(destination: result()
                                                             .navigationBarBackButtonHidden(true)) {
-                                                                Text("Start")
+                                                                Text("يلا بدينا")
                                                                     .font(.title3)
                                                                     .fontWeight(.bold)
                                                                     .foregroundColor(.white)

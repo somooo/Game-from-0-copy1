@@ -37,7 +37,7 @@ struct startPage: View {
                                 VStack(spacing: 50) {
                                     NavigationLink(destination: ContentView()
                                         .navigationBarBackButtonHidden(true)) {
-                                        Text("Start new game")
+                                        Text("تحدي جدييد")
                                             .fontWeight(.bold)
                                             .font(.title)
                                             .foregroundColor(Color(red: 0.317, green: 0.22, blue: 0.643))
@@ -56,7 +56,7 @@ struct startPage: View {
                                     NavigationLink(destination: JoinGameView(gameViewModel: GameViewModel())
                                         .navigationBarBackButtonHidden(true)
                                         ) {
-                                        Text("Join existing game")
+                                        Text("انضم للتحدي")
                                             .fontWeight(.bold)
                                             .font(.title)
                                             .foregroundColor(Color(red: 0.317, green: 0.22, blue: 0.643))

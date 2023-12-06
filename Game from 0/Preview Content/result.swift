@@ -28,33 +28,33 @@ struct result: View {
             VStack{
                 //Hstack1
                 HStack(spacing: 100, content: {
-                    Text("Player 1")
+                    Text("اللاعب ١")
                         .font(.title2)
                     //Hstack2
                     HStack{
-                        Text("10 Coins")
+                        Text("10 عملات")
                         Image("coin")
                     }//Hstack2
                 })//Hstack1
                 
                 //Hstack3
                 HStack(spacing: 100, content: {
-                    Text("Player 1")
+                    Text("اللاعب  ٢")
                         .font(.title2)
                     //Hstack4
                     HStack{
-                        Text("   7 Coins")
+                        Text("7 عملات")
                         Image("coin")
                     }//Hstack4
                 })//Hstack3
                 
                 //Hstack5
                 HStack(spacing: 100, content: {
-                    Text("Player 1")
+                    Text("اللاعب ٣")
                         .font(.title2)
                     //Hstack6
                     HStack{
-                        Text("   3 Coins")
+                        Text("3 عملات ")
                         Image("coin")
                     }//Hstack6
                 })//Hstack5
@@ -68,14 +68,14 @@ struct result: View {
             .font(.headline)
             .multilineTextAlignment(.center)
             
-            Text("Winners 🏆🎊")
+            Text("مبروك🏆🎊")
                 .font(.largeTitle)
                 .fontWeight(.heavy)
                 .padding(.bottom,450)
-                .position(x:222 ,y:430)
+                .position(x:220 ,y:430)
             
                 NavigationLink(destination: startPage()    .navigationBarBackButtonHidden(true)) {
-                        Text("Home       ")
+                    Image(systemName: "house")
                             .font(.title3)
                             .fontWeight(.bold)
                             .foregroundColor(.white)

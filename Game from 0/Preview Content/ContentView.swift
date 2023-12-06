@@ -131,8 +131,8 @@ struct ContentView: View {
                         }) {
                             NavigationLink(destination: GameCodePage()
                                 .navigationBarBackButtonHidden(true)) {
-                                    Text("Start")
-                                        .frame(width: 100, height: 40)
+                                    Text("خلصت👍🏻")
+                                        .frame(width: 120, height: 40)
                                         .font(.title)
                                         .background(Color.white.opacity(0.75))
                                     //  .cornerRadius(30)

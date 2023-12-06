@@ -29,14 +29,14 @@ struct Story2: View {
                 Image("NajdStory")
                     .resizable()
                     .frame(width: 290)
-                .position(CGPoint(x: 250, y: 324))
+                .position(CGPoint(x: 250, y: 327))
                    
                 ZStack{
                     Image("storyGlassCard")
                         .position(CGPoint(x: 215, y: 250))
                     
                     
-                    Text("Hello, i'm Najd \n Welcome to my GAME !\n Are you ready? ")
+                    Text("اجل وش رايك ياجدتي نرجع هاللعبة للحياة؟\nونخليها توصل لكل الأجيال بسحرها القديم..\nولعبتك ياجدتي راح تستمر وكلنا نستمتع فيها ! \n\n تعالو نلعبها")
                         .bold()
                         .position(CGPoint(x: 225, y: 240))
                       //  .font(.body)

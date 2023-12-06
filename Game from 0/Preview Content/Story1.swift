@@ -28,13 +28,13 @@ struct Story1: View {
             
             VStack{
                 Image("grandMa")
-                    .position(CGPoint(x: 155, y: 347))
+                    .position(CGPoint(x: 155, y: 349))
                   //  .imageScale(.large)
                 ZStack{
                     Image("storyGlassCard")
                         .position(CGPoint(x: 215, y: 240))
                     
-                    Text("Hello, world!\n Welcome to SwiftUI!\nI have a perfect game!!")
+                    Text("والله انّي حنيت واشتقت للماضي ياعيالي،\n يوم كنت بعمركم وكنا نجتمع ونلعب  لعبتنا المفضله \nويقوم واحد من بيننا ويخبي عننا شي \nثم نبدا كلنا ندور عليه بحماس والفايز هو من يلقاه..\nليت هالايام ترجع وليت هالالعاب الزينه ماتختفي  ")
                         .bold()
                         .position(CGPoint(x: 220, y: 230))
                       //  .font(.body)
