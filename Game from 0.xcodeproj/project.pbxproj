@@ -28,6 +28,7 @@
 		3582DCEC2B1DF25600832623 /* GameCodePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DCEB2B1DF25600832623 /* GameCodePage.swift */; };
 		3582DCEE2B1F008D00832623 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DCED2B1F008D00832623 /* model.swift */; };
 		3582DCF12B1F017A00832623 /* coin.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3582DCF02B1F017A00832623 /* coin.usdz */; };
+		D452A5E92B20A43700B8FE5C /* result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452A5E82B20A43700B8FE5C /* result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		3582DCEB2B1DF25600832623 /* GameCodePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCodePage.swift; sourceTree = "<group>"; };
 		3582DCED2B1F008D00832623 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
 		3582DCF02B1F017A00832623 /* coin.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = coin.usdz; sourceTree = "<group>"; };
+		D452A5E82B20A43700B8FE5C /* result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				3582DCEB2B1DF25600832623 /* GameCodePage.swift */,
 				3582DCDE2B1C675E00832623 /* JoinGameView.swift */,
 				3582DCAA2B15DB6B00832623 /* Preview Assets.xcassets */,
+				D452A5E82B20A43700B8FE5C /* result.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				3582DCE62B1DF1AA00832623 /* Story2.swift in Sources */,
 				3582DCDF2B1C675E00832623 /* JoinGameView.swift in Sources */,
 				3582DCE82B1DF1E000832623 /* startPage.swift in Sources */,
+				D452A5E92B20A43700B8FE5C /* result.swift in Sources */,
 				3582DCA62B15DB6A00832623 /* ContentView.swift in Sources */,
 				3582DCDA2B15E54800832623 /* ARViewContainer.swift in Sources */,
 				3582DCE42B1DF17C00832623 /* Story1.swift in Sources */,
