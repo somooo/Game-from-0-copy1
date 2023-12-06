@@ -37,7 +37,7 @@ struct startPage: View {
                                 VStack(spacing: 50) {
                                     NavigationLink(destination: ContentView()
                                         .navigationBarBackButtonHidden(true)) {
-                                        Text("تحدي جدييد")
+                                            Text("تحدي جدييد")
                                             .fontWeight(.bold)
                                             .font(.title)
                                             .foregroundColor(Color(red: 0.317, green: 0.22, blue: 0.643))
