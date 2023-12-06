@@ -57,36 +57,40 @@ struct ContentView: View {
         }
         
        func updateUIView(_ uiView: ARView, context: Context) {
-                   if let model = self.modelConfirmedForPlacement {
-                       if let modelEntity = model.modelEntity {
-                           // Perform a raycast to find a horizontal surface
-                           let results = uiView.raycast(from: uiView.center, allowing: .estimatedPlane, alignment: .horizontal)
-
-                           if let firstResult = results.first {
-                               // Extract translation from the world transform
-                               let translation = firstResult.worldTransform.columns.3
-
-                               // Create an anchor at the hit location
-                               let anchorEntity = AnchorEntity(world: [translation.x, translation.y, translation.z])
-                               anchorEntity.addChild(modelEntity)
-
-                               // Add the anchor to the ARView's scene
-                               uiView.scene.addAnchor(anchorEntity)
-
-                               // Reset the confirmed model
-                               DispatchQueue.main.async {
-                                   self.modelConfirmedForPlacement = nil
-                               }
-                           } else {
-                               print("DEBUG: Unable to find a horizontal surface.")
-                           }
-
-
-                       } else {
-                           print("DEBUG: Unable to load modelEntity for \(model.ModelName)")
-                       }
+           if let model = self.modelConfirmedForPlacement {
+               if let modelEntity = model.modelEntity {
+                   // Perform a raycast to find a horizontal surface
+                   let results = uiView.raycast(from: uiView.center, allowing: .estimatedPlane, alignment: .horizontal)
+                   
+                   if let firstResult = results.first {
+                       // Extract translation from the world transform
+                       let translation = firstResult.worldTransform.columns.3
+                       let anchorEntity = AnchorEntity(plane: .horizontal)
+                       anchorEntity.addChild(modelEntity.clone(recursive: true))
+                       let scaleFactor: Float = 0.1
+                       
+                       anchorEntity.scale = [scaleFactor, scaleFactor, scaleFactor]
+                       
+                       
+                       // Create an anchor at the hit location
+                       //     let anchorEntity = AnchorEntity(world: [translation.x, translation.y, translation.z])
+                       anchorEntity.addChild(modelEntity)
+                       
+                       // Add the anchor to the ARView's scene
+                       uiView.scene.addAnchor(anchorEntity)
+                       
+                       // Reset the confirmed model
                    }
+                   
+                   else {
+                       print("DEBUG: Unable to load modelEntity for \(model.ModelName)")
+                   }
+               } 
+               DispatchQueue.main.async {
+                   self.modelConfirmedForPlacement = nil
                }
+           }
+       }
 
     }
     
@@ -191,5 +195,4 @@ struct PlacementButtonView: View {
             ContentView()
         }
     }
-
 
