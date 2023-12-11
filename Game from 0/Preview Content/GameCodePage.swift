@@ -18,7 +18,7 @@ struct GameCodePage: View {
         ZStack{
             VStack {
                 // Text
-                Text("رمز التحدي")
+                Text("Game Code")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(.black)
@@ -63,7 +63,7 @@ struct GameCodePage: View {
                                                             gameCode = GameCodeGenerator.generateGameCode()
                                                         }//button
                                                         ) {
-                                                            Text("نسخ")
+                                                            Text("Copy")
                                                                 .font(.title3)
                                                                 .fontWeight(.bold)
                                                                 .foregroundColor(.white)
@@ -82,7 +82,7 @@ struct GameCodePage: View {
                                                     ) {
                                                         NavigationLink(destination: liveResults()
                                                             .navigationBarBackButtonHidden(true)) {
-                                                                Text("يلا بدينا")
+                                                                Text("Start")
                                                                     .font(.title3)
                                                                     .fontWeight(.bold)
                                                                     .foregroundColor(.white)
@@ -92,7 +92,7 @@ struct GameCodePage: View {
                             
                                                     .background(Color.blue)
                                                     .cornerRadius(10)
-                                                    .padding()
+                                                    .padding()/**/
                                                   
                             
                         }//Hstack

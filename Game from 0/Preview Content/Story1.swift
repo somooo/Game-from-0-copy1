@@ -34,12 +34,12 @@ struct Story1: View {
                     Image("storyGlassCard")
                         .position(CGPoint(x: 215, y: 240))
                     
-                    Text("والله انّي حنيت للماضي ياعيالي،\n يوم كنت بعمركم وكنا نجتمع ونلعب لعبتنا المفضله \nويقوم واحد من بيننا ويخبي عننا شي \nثم نبدا كلنا ندور عليه بحماس والفايز هو من يلقاه..\nليت هالايام ترجع وليت هالالعاب الزينه ماتختفي  ")
+                    Text("I long for the past, my children, when I was a child \nand we used to get together and play our favorite game.. \n One of us gets up and hides something,\n then we play our part as players searching for it\n with all enthusiasm, and whoever finds this thing first\n is the winner I wish the days would return\n and these wonderful games would not disappear")
                         .bold()
-                        .position(CGPoint(x: 220, y: 230))
+                        .position(CGPoint(x: 220, y: 220))
                       //  .font(.body)
                        // .fontWeight(.ultraLight)
-                        .font(.headline)
+                        .font(.caption)
                         .multilineTextAlignment(.center)
                        
                     

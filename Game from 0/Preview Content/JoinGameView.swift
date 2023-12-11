@@ -24,29 +24,29 @@ struct JoinGameView: View {
                     .resizable()
                 .frame(width: 370,height: 500)
                 VStack {
-                    Text("ادخل رمز التحدي:")
+                    Text("Enter Game Code:")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(.black)
                         .padding(.bottom, -30.0)
                     
-                    TextField("رمز التحدي", text: $enteredCode)
+                    TextField("Game code ", text: $enteredCode)
                         .padding(35.0)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     
-                    Text("اسمك:")
+                    Text("Your Name:")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(.black)
                         .padding(.bottom, -30.0)
                     
-                    TextField("اسمك", text: $playerName)
+                    TextField("Your name", text: $playerName)
                         .padding(35)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     
                     NavigationLink(destination: ContentView()
                         .navigationBarBackButtonHidden(true), isActive: $isJoiningGame) {
-                        Text("ادخل التحدي")
+                        Text("Join")
                             .font(.title3)
                             .fontWeight(.bold)
                             .foregroundColor(.white)

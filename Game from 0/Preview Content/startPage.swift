@@ -37,7 +37,7 @@ struct startPage: View {
                                 VStack(spacing: 50) {
                                     NavigationLink(destination: ContentView()
                                         .navigationBarBackButtonHidden(true)) {
-                                            Text("تحدي جديد")
+                                            Text("New Game")
                                                 .fontWeight(.bold)
                                                 .font(.title)
                                                 .foregroundColor(Color(red: 0.317, green: 0.22, blue: 0.643))
@@ -56,7 +56,7 @@ struct startPage: View {
                                     NavigationLink(destination: JoinGameView(gameViewModel: GameViewModel())
                                         .navigationBarBackButtonHidden(true)
                                     ) {
-                                        Text("انضم للتحدي")
+                                        Text("Join to Game")
                                             .fontWeight(.bold)
                                             .font(.title)
                                             .foregroundColor(Color(red: 0.317, green: 0.22, blue: 0.643))
@@ -64,24 +64,25 @@ struct startPage: View {
                                 }
                             }
                             .padding()
-                            .frame(maxWidth: .infinity)
+                            .frame(maxWidth:.infinity)
                             .foregroundColor(.white)
                             .background(Color.white.gradient).opacity(0.9)
                             .cornerRadius(15)
                             .padding()
                         }
                     }
-                        NavigationLink(destination: HowToPlay(sheetShowing: .constant(true))){
-                            Text("كيف العبها؟..")
+                    NavigationLink(destination:HowToPlay(sheetShowing: .constant(true))){
+                        Text("How i play it?..")
+                    }
+                            .font(.caption)
                             .foregroundColor(.black)
-                            .position(x:170, y:690)
-                        
+                            .position(x:180, y:690)
                     }
                 }
             }
         }
     }
-}
+
 
 #Preview {
     startPage()

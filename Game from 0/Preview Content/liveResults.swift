@@ -23,15 +23,15 @@ struct liveResults: View {
                     .fill(.white.opacity(0.8))
                     .frame(width: 300, height: 450)
                 
-                    Text("راقبهم 👀")
+                    Text("Watch them 👀")
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                         .bold()
                         .position(x: 220, y: 200)
                         
                     HStack{
-    
-                        Text("٢ لاعبين")
                         Image(systemName: "person.2")
+                        Text("2 Players")
+                        
                     }
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     .bold()
@@ -39,16 +39,15 @@ struct liveResults: View {
                     .position(x: 220, y: 320)
                     
                     HStack{
-                    
-                        Text("العملات المتبقية")
-                        Image(systemName: "xmark")
-                            .resizable()
-                            .frame(width: 10, height: 10)
-                        Text("٠")
-                        
                         Image("coin")
                             .resizable()
                             .frame(width: 30, height: 30)
+                        Image(systemName: "xmark")
+                            .resizable()
+                            .frame(width: 10, height: 10)
+                        Text("0")
+                        Text("Coins left")
+                  
                     }
                     .font(.title2)
                     .bold()
@@ -56,7 +55,7 @@ struct liveResults: View {
                     .position(x: 220, y: 400)
                     
                     NavigationLink(destination: result()    .navigationBarBackButtonHidden(true)) {
-                        Text("انهي التحدي")
+                        Text("End Game")
                                 .font(.title3)
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)

@@ -36,12 +36,12 @@ struct Story2: View {
                         .position(CGPoint(x: 215, y: 250))
                     
                     
-                    Text("اجل وش رايك ياجدتي نرجع هاللعبة للحياة؟\nونخليها توصل لكل الأجيال بسحرها القديم..\nولعبتك ياجدتي راح تستمر وكلنا نستمتع فيها ! \n\n تعالو نلعبها")
+                    Text("Grandma, how about we bring this game back to life?\n And we make it reach all generations with its ancient magic..\n And your favorite game, my grandmother, will continue \nand everyone will enjoy it\n \n\n Let’s play!")
                         .bold()
-                        .position(CGPoint(x: 225, y: 240))
-                      //  .font(.body)
+                        .position(CGPoint(x: 215, y: 260))
+                        .bold()
                        // .fontWeight(.ultraLight)
-                        .font(.headline)
+                        .font(.caption)
                         .multilineTextAlignment(.center)
                        
                     

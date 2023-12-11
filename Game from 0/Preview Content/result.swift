@@ -39,7 +39,7 @@ struct result: View {
                                            
                                        //Hstack6
                                        HStack{
-                                           Text("٢ عملات")
+                                           Text("2 Coins")
                                            Image("coin")
                                        }//Hstack6
                                    })//Hstack5
@@ -63,7 +63,7 @@ struct result: View {
                                            
                                        //Hstack6
                                        HStack{
-                                           Text("٠ عملات")
+                                           Text("0 Coins")
                                            Image("coin")
                                        }//Hstack6
                                    })//Hstack5
@@ -98,7 +98,7 @@ struct result: View {
                 
             }//Vstack1
             
-            Text("مبروك🏆🎊")
+            Text("Winners 🏆🎊")
                 .font(.largeTitle)
                 .fontWeight(.heavy)
                 .padding(.bottom,450)
