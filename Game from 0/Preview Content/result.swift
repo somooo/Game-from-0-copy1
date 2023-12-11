@@ -26,47 +26,77 @@ struct result: View {
             
             //Vstack1
             VStack{
-                //Hstack1
-                HStack(spacing: 100, content: {
-                    Text("اللاعب ١")
-                        .font(.title2)
-                    //Hstack2
-                    HStack{
-                        Text("10 عملات")
-                        Image("coin")
-                    }//Hstack2
-                })//Hstack1
-                
-                //Hstack3
-                HStack(spacing: 100, content: {
-                    Text("اللاعب  ٢")
-                        .font(.title2)
-                    //Hstack4
-                    HStack{
-                        Text("7 عملات")
-                        Image("coin")
-                    }//Hstack4
-                })//Hstack3
-                
-                //Hstack5
-                HStack(spacing: 100, content: {
-                    Text("اللاعب ٣")
-                        .font(.title2)
-                    //Hstack6
-                    HStack{
-                        Text("3 عملات ")
-                        Image("coin")
-                    }//Hstack6
-                })//Hstack5
-                
-                .padding(.bottom,90)
-                
-                
+                ZStack{
+                    RoundedRectangle(cornerSize: .zero)
+                   // Rectangle()
+                            .fill(.black.opacity(0.1))
+                            .frame(width: 330,height: 60)
+                            // .padding(1)
+                    
+                    //Hstack5
+                                   HStack(spacing: 100, content: {
+                                       Text("Muna")
+                                           
+                                       //Hstack6
+                                       HStack{
+                                           Text("٢ عملات")
+                                           Image("coin")
+                                       }//Hstack6
+                                   })//Hstack5
+                                   .font(.title)
+                                   .bold()
+                    
+                    
+                }
+                ZStack{
+                    RoundedRectangle(cornerSize: .zero)
+                   // Rectangle()
+                            .fill(.black.opacity(0.08))
+                            .frame(width: 330,height: 40)
+                           //  .padding(1)
+                    
+                    
+                                        
+                    //Hstack5
+                                   HStack(spacing: 100, content: {
+                                       Text("Sarah")
+                                           
+                                       //Hstack6
+                                       HStack{
+                                           Text("٠ عملات")
+                                           Image("coin")
+                                       }//Hstack6
+                                   })//Hstack5
+                                   .font(.title2)
+                                   .bold()
+                    
+                }
+                ZStack{
+                    /* RoundedRectangle(cornerSize: .zero)
+                   // Rectangle()
+                            .fill(.black.opacity(0.08))
+                            .frame(width: 330,height: 30)
+                           //  .padding(1)
+                    
+                    
+                    //Hstack5
+                                   HStack(spacing: 100, content: {
+                                       Text("Muna")
+                                           
+                                       //Hstack6
+                                       HStack{
+                                           Text("٣ عملات ")
+                                           Image("coin")
+                                       }//Hstack6
+                                   })//Hstack5
+                                   .font(.title3)
+                                   .bold()*/
+                    
+                    
+                }
+               
                 
             }//Vstack1
-            .fontWeight(.bold)
-            .font(.headline)
-            .multilineTextAlignment(.center)
             
             Text("مبروك🏆🎊")
                 .font(.largeTitle)

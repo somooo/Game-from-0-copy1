@@ -11,14 +11,17 @@ import ARKit
 import CloudKit
 
 struct ContentView: View {
+    // State object for managing the game's view model
     @StateObject private var gameViewModel = GameViewModel()
     
     
-    
+    // State variables for managing model placement
         @State private var isPlacementEnabled = false
         @State private var selectedModel: model?
         @State private var modelConfirmedPlacement: model?
-        
+    
+    
+    // Computed property to load 3D models from the app's resource directory
         private var Models: [model] = {
             let filemanager = FileManager.default
             
@@ -35,48 +38,58 @@ struct ContentView: View {
             return availableModels
         }()
         
+    // Main body of the view
         var body: some View {
+            // ZStack for stacking views
             ZStack(alignment: .bottom) {
+                // ARViewContainer for managing AR-related functionality
                ARViewContainer(modelConfirmedForPlacement: self.$modelConfirmedPlacement)
                 
+                // Conditional rendering based on model placement state
                 if self.isPlacementEnabled {
+                    // PlacementButtonView for confirming or canceling model placement
                     PlacementButtonView(isPlacementEnabled: self.$isPlacementEnabled, selectedModel: self.$selectedModel, modelConfirmedForPlacement: self.$modelConfirmedPlacement)
                 } else {
+                    // ModelPickerView for choosing 3D models
                     ModelPickerView(isPlacementEnabled: self.$isPlacementEnabled, selectedModel: self.$selectedModel, Models: self.Models)
                 }
             }
         }
     }
-    
+// ARViewContainer struct for encapsulating AR view functionality
    struct ARViewContainer: UIViewRepresentable {
+       // Binding for the confirmed model for placement
         @Binding var modelConfirmedForPlacement: model?
         
+       // Creates and returns an instance of ARView
         func makeUIView(context: Context) -> ARView {
             let arView = ARView(frame: .zero)
             // ... (unchanged)
             return arView
         }
         
+       // Updates the AR view with the confirmed 3D model when available
        func updateUIView(_ uiView: ARView, context: Context) {
            if let model = self.modelConfirmedForPlacement {
                if let modelEntity = model.modelEntity {
                    print("DEBUG: adding model to scene - \(model.ModelName)")
                    
                    // Perform a raycast to find a horizontal surface
+                   
                    let results = uiView.raycast(from: uiView.center, allowing: .estimatedPlane, alignment: .horizontal)
                    
                    if let firstResult = results.first {
                        // Extract translation from the world transform
-                       let translation = firstResult.worldTransform.columns.3
+                         firstResult.worldTransform.columns.3
                        let anchorEntity = AnchorEntity(plane: .horizontal)
                        anchorEntity.addChild(modelEntity.clone(recursive: true))
+                       //     let anchorEntity = AnchorEntity(world: [translation.x, translation.y, translation.z])
                        let scaleFactor: Float = 0.1
                        
                        anchorEntity.scale = [scaleFactor, scaleFactor, scaleFactor]
                        
                        
                        // Create an anchor at the hit location
-                       //     let anchorEntity = AnchorEntity(world: [translation.x, translation.y, translation.z])
                        anchorEntity.addChild(modelEntity)
                        
                        // Add the anchor to the ARView's scene
@@ -89,6 +102,7 @@ struct ContentView: View {
                        print("DEBUG: Unable to load modelEntity for \(model.ModelName)")
                    }
                } 
+               
                DispatchQueue.main.async {
                    self.modelConfirmedForPlacement = nil
                }
@@ -97,17 +111,23 @@ struct ContentView: View {
 
     }
     
+// ModelPickerView struct for choosing 3D models
     struct ModelPickerView: View {
+        // Bindings for model placement state and selected model
         @Binding var isPlacementEnabled: Bool
         @Binding var selectedModel: model?
         
+        // Array of available 3D models
         var Models: [model]
         
+        // Main body of the view
         var body: some View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 30) {
+                    // Iterate over available models
                     ForEach(0 ..< self.Models.count) { index in
-                        Button(action: {
+                        // Button for each model, sets selected model and enables placement
+                    Button(action: {
                             print("DEBUG: selected Model with name: \(self.Models[index].ModelName)")
                             
                             self.selectedModel = self.Models[index]
@@ -123,6 +143,34 @@ struct ContentView: View {
                             
                             
                         } .buttonStyle(PlainButtonStyle())
+                    
+                  /*  Button(action: {
+                        print("DEBUG: selected Model with name: \(self.Models[index].ModelName)")
+                        
+                        self.selectedModel = self.Models[index]
+                        
+                        self.isPlacementEnabled = true
+                        var scale: CGFloat {.zero}
+                        //self.resetPlacementParameters()
+                    }) {
+                                HStack{
+                                    Text("٢ عملات ")
+                                    Image(systemName:"xmark")
+                                    Image("coin")
+                                    
+                                }
+                                       // .imageScale(.large)
+                                   // image(Systemname:"Xmark")
+                                        .frame(width: 140, height: 40)
+                                        .font(.title3)
+                                        .background(Color.white.opacity(0.75))
+                                        .foregroundColor(.black)
+                                      .cornerRadius(30)
+                                        .padding(20)
+                                }*/
+                            
+                           
+                    
                         
                         Button(action: {
                             print("DEBUG: Countinue to code game.")
@@ -131,13 +179,22 @@ struct ContentView: View {
                         }) {
                             NavigationLink(destination: GameCodePage()
                                 .navigationBarBackButtonHidden(true)) {
-                                    Text("خلصت👍🏻")
-                                        .frame(width: 120, height: 40)
-                                        .font(.title)
-                                        .background(Color.white.opacity(0.75))
-                                    //  .cornerRadius(30)
-                                        .padding(20)
-                                }
+                                    HStack{
+                                        Text("Done")
+                                        //Image(systemName:"xmark")
+                                       // Text("٢ لاعبين")
+                                       // Image(systemName: "person.2")
+                                    }
+                                           // .imageScale(.large)
+                                       // image(Systemname:"Xmark")
+                                            .frame(width: 140, height: 40)
+                                            .font(.title3)
+                                            .background(Color.white.opacity(0.75))
+                                            .foregroundColor(.blue)
+                                          .cornerRadius(30)
+                                            .padding(20)
+                                    }
+                                
                                
                         }
                        
@@ -149,14 +206,19 @@ struct ContentView: View {
             }
         }
     }
+
+// PlacementButtonView struct for confirming or canceling model placement
     
 struct PlacementButtonView: View {
+    // Bindings for model placement state and selected/confirmed models
     @Binding var isPlacementEnabled: Bool
     @Binding var selectedModel: model?
     @Binding var modelConfirmedForPlacement: model?
     
+    // Main body of the view
     var body: some View {
             HStack {
+                // Button for canceling model placement
                 Button(action: {
                     print("DEBUG: model placement cancelled.")
                     self.resetPlacementParameters()
@@ -169,6 +231,7 @@ struct PlacementButtonView: View {
                         .padding(20)
                 }
                 
+                // Button for confirming model placement
                 Button(action: {
                     print("DEBUG: model placement confirmed.")
                     self.modelConfirmedForPlacement = self.selectedModel
@@ -186,6 +249,7 @@ struct PlacementButtonView: View {
             }
         }
     
+    // Function to reset model placement parameters
         func resetPlacementParameters() {
             self.isPlacementEnabled = false
             self.selectedModel = nil

@@ -20,7 +20,7 @@ struct JoinGameView: View {
         NavigationView {
             ZStack{
                 
-                Image("timerGlass")
+                Image("resultGlassCard")
                     .resizable()
                 .frame(width: 370,height: 500)
                 VStack {
@@ -41,10 +41,11 @@ struct JoinGameView: View {
                         .padding(.bottom, -30.0)
                     
                     TextField("اسمك", text: $playerName)
-                        .padding(35.0)
+                        .padding(35)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     
-                    NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true), isActive: $isJoiningGame) {
+                    NavigationLink(destination: ContentView()
+                        .navigationBarBackButtonHidden(true), isActive: $isJoiningGame) {
                         Text("ادخل التحدي")
                             .font(.title3)
                             .fontWeight(.bold)

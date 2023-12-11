@@ -31,17 +31,17 @@ struct startPage: View {
                             .resizable()
                             .frame(width: 330, height: 330)
                             .padding()
-
+                        
                         VStack {
                             HStack {
                                 VStack(spacing: 50) {
                                     NavigationLink(destination: ContentView()
                                         .navigationBarBackButtonHidden(true)) {
-                                            Text("تحدي جدييد")
-                                            .fontWeight(.bold)
-                                            .font(.title)
-                                            .foregroundColor(Color(red: 0.317, green: 0.22, blue: 0.643))
-                                    }
+                                            Text("تحدي جديد")
+                                                .fontWeight(.bold)
+                                                .font(.title)
+                                                .foregroundColor(Color(red: 0.317, green: 0.22, blue: 0.643))
+                                        }
                                 }
                             }
                             .padding()
@@ -50,12 +50,12 @@ struct startPage: View {
                             .background(Color.white.gradient).opacity(0.9)
                             .cornerRadius(15)
                             .padding()
-
+                            
                             HStack(spacing: 20) {
                                 VStack(spacing: 20) {
                                     NavigationLink(destination: JoinGameView(gameViewModel: GameViewModel())
                                         .navigationBarBackButtonHidden(true)
-                                        ) {
+                                    ) {
                                         Text("انضم للتحدي")
                                             .fontWeight(.bold)
                                             .font(.title)
@@ -70,6 +70,12 @@ struct startPage: View {
                             .cornerRadius(15)
                             .padding()
                         }
+                    }
+                        NavigationLink(destination: HowToPlay(sheetShowing: .constant(true))){
+                            Text("كيف العبها؟..")
+                            .foregroundColor(.black)
+                            .position(x:170, y:690)
+                        
                     }
                 }
             }

@@ -74,13 +74,13 @@ struct GameCodePage: View {
                                                     .padding()
                                                     
                                                     
-                                                    Button(action: {
+                                                   Button(action: {
                                                         
                                                         // Optionally, you can regenerate the code when the button is tapped
-                                                        gameCode = GameCodeGenerator.generateGameCode()
+                                                       // gameCode = GameCodeGenerator.generateGameCode()
                                                     }//button
                                                     ) {
-                                                        NavigationLink(destination: result()
+                                                        NavigationLink(destination: liveResults()
                                                             .navigationBarBackButtonHidden(true)) {
                                                                 Text("يلا بدينا")
                                                                     .font(.title3)
@@ -89,9 +89,11 @@ struct GameCodePage: View {
                                                                     .padding()
                                                             }//Navigationlink
                                                     }//NavegationLink
+                            
                                                     .background(Color.blue)
                                                     .cornerRadius(10)
                                                     .padding()
+                                                  
                             
                         }//Hstack
                         .position(x:200 , y:30 )

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		351CA33A2B217E690005BCCC /* liveResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351CA3392B217E690005BCCC /* liveResults.swift */; };
 		3582DCA42B15DB6A00832623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DCA32B15DB6A00832623 /* AppDelegate.swift */; };
 		3582DCA62B15DB6A00832623 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DCA52B15DB6A00832623 /* ContentView.swift */; };
 		3582DCA82B15DB6B00832623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3582DCA72B15DB6B00832623 /* Assets.xcassets */; };
@@ -24,10 +25,12 @@
 		3582DCE42B1DF17C00832623 /* Story1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DCE32B1DF17C00832623 /* Story1.swift */; };
 		3582DCE62B1DF1AA00832623 /* Story2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DCE52B1DF1AA00832623 /* Story2.swift */; };
 		3582DCE82B1DF1E000832623 /* startPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DCE72B1DF1E000832623 /* startPage.swift */; };
-		3582DCEA2B1DF20300832623 /* SetTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DCE92B1DF20300832623 /* SetTimer.swift */; };
 		3582DCEC2B1DF25600832623 /* GameCodePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DCEB2B1DF25600832623 /* GameCodePage.swift */; };
 		3582DCEE2B1F008D00832623 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DCED2B1F008D00832623 /* model.swift */; };
 		3582DCF12B1F017A00832623 /* coin.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3582DCF02B1F017A00832623 /* coin.usdz */; };
+		35CFAAE92B26D44C00808054 /* HowToPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CFAAE82B26D44C00808054 /* HowToPlay.swift */; };
+		35CFAAED2B26E0C900808054 /* Desc1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CFAAEC2B26E0C900808054 /* Desc1.swift */; };
+		35CFAAEF2B26E0F400808054 /* Desc2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CFAAEE2B26E0F400808054 /* Desc2.swift */; };
 		D452A5E92B20A43700B8FE5C /* result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452A5E82B20A43700B8FE5C /* result.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		351CA3392B217E690005BCCC /* liveResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = liveResults.swift; sourceTree = "<group>"; };
 		3582DCA02B15DB6A00832623 /* Game from 0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game from 0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3582DCA32B15DB6A00832623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3582DCA52B15DB6A00832623 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,10 +74,12 @@
 		3582DCE32B1DF17C00832623 /* Story1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story1.swift; sourceTree = "<group>"; };
 		3582DCE52B1DF1AA00832623 /* Story2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story2.swift; sourceTree = "<group>"; };
 		3582DCE72B1DF1E000832623 /* startPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startPage.swift; sourceTree = "<group>"; };
-		3582DCE92B1DF20300832623 /* SetTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimer.swift; sourceTree = "<group>"; };
 		3582DCEB2B1DF25600832623 /* GameCodePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCodePage.swift; sourceTree = "<group>"; };
 		3582DCED2B1F008D00832623 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
 		3582DCF02B1F017A00832623 /* coin.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = coin.usdz; sourceTree = "<group>"; };
+		35CFAAE82B26D44C00808054 /* HowToPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlay.swift; sourceTree = "<group>"; };
+		35CFAAEC2B26E0C900808054 /* Desc1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desc1.swift; sourceTree = "<group>"; };
+		35CFAAEE2B26E0F400808054 /* Desc2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desc2.swift; sourceTree = "<group>"; };
 		D452A5E82B20A43700B8FE5C /* result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,15 +149,18 @@
 				3582DCE32B1DF17C00832623 /* Story1.swift */,
 				3582DCE52B1DF1AA00832623 /* Story2.swift */,
 				3582DCE72B1DF1E000832623 /* startPage.swift */,
-				3582DCE92B1DF20300832623 /* SetTimer.swift */,
+				35CFAAE82B26D44C00808054 /* HowToPlay.swift */,
+				35CFAAEC2B26E0C900808054 /* Desc1.swift */,
+				35CFAAEE2B26E0F400808054 /* Desc2.swift */,
 				3582DCA52B15DB6A00832623 /* ContentView.swift */,
+				3582DCED2B1F008D00832623 /* model.swift */,
 				3582DCD72B15E3A200832623 /* ARGameView.swift */,
 				3582DCCF2B15E08500832623 /* GameViewModel.swift */,
-				3582DCED2B1F008D00832623 /* model.swift */,
 				3582DCD52B15E18F00832623 /* GameProgressView.swift */,
 				3582DCEB2B1DF25600832623 /* GameCodePage.swift */,
 				3582DCDE2B1C675E00832623 /* JoinGameView.swift */,
 				D452A5E82B20A43700B8FE5C /* result.swift */,
+				351CA3392B217E690005BCCC /* liveResults.swift */,
 				3582DCAA2B15DB6B00832623 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -261,7 +270,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3582DC9B2B15DB6A00832623 /* Build configuration list for PBXProject "Game from 0" */;
+			buildConfigurationList = 3582DC9B2B15DB6A00832623 /* Build configuration list for PBXProject "NAJD" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -318,12 +327,15 @@
 				3582DCD62B15E18F00832623 /* GameProgressView.swift in Sources */,
 				3582DCE62B1DF1AA00832623 /* Story2.swift in Sources */,
 				3582DCDF2B1C675E00832623 /* JoinGameView.swift in Sources */,
+				351CA33A2B217E690005BCCC /* liveResults.swift in Sources */,
+				35CFAAED2B26E0C900808054 /* Desc1.swift in Sources */,
 				3582DCE82B1DF1E000832623 /* startPage.swift in Sources */,
+				35CFAAE92B26D44C00808054 /* HowToPlay.swift in Sources */,
 				D452A5E92B20A43700B8FE5C /* result.swift in Sources */,
 				3582DCA62B15DB6A00832623 /* ContentView.swift in Sources */,
+				35CFAAEF2B26E0F400808054 /* Desc2.swift in Sources */,
 				3582DCDA2B15E54800832623 /* ARViewContainer.swift in Sources */,
 				3582DCE42B1DF17C00832623 /* Story1.swift in Sources */,
-				3582DCEA2B1DF20300832623 /* SetTimer.swift in Sources */,
 				3582DCEE2B1F008D00832623 /* model.swift in Sources */,
 				3582DCD42B15E15D00832623 /* GameCodeGenerator.swift in Sources */,
 				3582DCEC2B1DF25600832623 /* GameCodePage.swift in Sources */,
@@ -493,7 +505,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Game from 0/Preview Content\"";
-				DEVELOPMENT_TEAM = Y45AGL4RGX;
+				DEVELOPMENT_TEAM = DFQ2G36PPT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -508,7 +520,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "bkf.Game-from-0";
+				PRODUCT_BUNDLE_IDENTIFIER = NAJD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -525,7 +537,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Game from 0/Preview Content\"";
-				DEVELOPMENT_TEAM = Y45AGL4RGX;
+				DEVELOPMENT_TEAM = DFQ2G36PPT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -540,7 +552,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "bkf.Game-from-0";
+				PRODUCT_BUNDLE_IDENTIFIER = NAJD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -623,7 +635,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3582DC9B2B15DB6A00832623 /* Build configuration list for PBXProject "Game from 0" */ = {
+		3582DC9B2B15DB6A00832623 /* Build configuration list for PBXProject "NAJD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3582DCC22B15DB6B00832623 /* Debug */,
